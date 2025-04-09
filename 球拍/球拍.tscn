@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://bqp1g4d5r06sf"]
+
+[ext_resource type="Texture2D" uid="uid://bsjkxlr34kg1j" path="res://图片/球拍.png" id="1_4s4vg"]
+[ext_resource type="Script" uid="uid://boktlfusjuvim" path="res://球拍/球拍1.gd" id="1_dvvil"]
+[ext_resource type="Script" uid="uid://6mcvo3sccg05" path="res://球拍/球拍2.gd" id="3_gxtfa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dvvil"]
+size = Vector2(31, 94)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gxtfa"]
+size = Vector2(31.125, 93.75)
+
+[node name="球拍" type="Node2D"]
+
+[node name="Area2D2" type="Area2D" parent="."]
+script = ExtResource("1_dvvil")
+
+[node name="球拍1" type="Sprite2D" parent="Area2D2"]
+position = Vector2(36, 322)
+texture = ExtResource("1_4s4vg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(20.5, 314)
+shape = SubResource("RectangleShape2D_dvvil")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("3_gxtfa")
+
+[node name="球拍2" type="Sprite2D" parent="Area2D"]
+position = Vector2(1147, 323)
+texture = ExtResource("1_4s4vg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1131.44, 315)
+shape = SubResource("RectangleShape2D_gxtfa")

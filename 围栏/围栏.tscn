@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxh44rtqif1ox"]
+
+[ext_resource type="Texture2D" uid="uid://blhxrc658s34a" path="res://图片/围栏.png" id="1_6uxu4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e1pgw"]
+size = Vector2(1156, 25)
+
+[node name="围栏" type="Node2D"]
+metadata/_edit_horizontal_guides_ = [29.0, -96.0]
+
+[node name="上围栏" type="Area2D" parent="."]
+metadata/_edit_horizontal_guides_ = [29.0]
+
+[node name="Sprite2D" type="Sprite2D" parent="上围栏"]
+position = Vector2(578, 295)
+texture = ExtResource("1_6uxu4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="上围栏"]
+visible = false
+position = Vector2(577, 13.5)
+shape = SubResource("RectangleShape2D_e1pgw")
+one_way_collision_margin = 27.0
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(578, 973)
+texture = ExtResource("1_6uxu4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+position = Vector2(576, 635)
+shape = SubResource("RectangleShape2D_e1pgw")
+one_way_collision_margin = 27.0
