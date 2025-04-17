@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://bi7p0uf4ykc73"]
+
+[ext_resource type="Script" uid="uid://txj5daldfybh" path="res://球台/球台.gd" id="1_iogvd"]
+[ext_resource type="Texture2D" uid="uid://r7vqbawu6ifa" path="res://图片/球台.png" id="2_7bfvr"]
+[ext_resource type="PackedScene" uid="uid://bqp1g4d5r06sf" path="res://球拍/球拍.tscn" id="3_u1dbs"]
+[ext_resource type="PackedScene" uid="uid://cxh44rtqif1ox" path="res://围栏/围栏.tscn" id="4_6pe6m"]
+[ext_resource type="PackedScene" uid="uid://b3otxjtwf2387" path="res://小球/小球.tscn" id="5_7bfvr"]
+
+[node name="球台" type="Node2D"]
+script = ExtResource("1_iogvd")
+metadata/_edit_horizontal_guides_ = [27.0, 649.0]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 322)
+texture = ExtResource("2_7bfvr")
+
+[node name="球拍" parent="." instance=ExtResource("3_u1dbs")]
+
+[node name="围栏" parent="." instance=ExtResource("4_6pe6m")]
+position = Vector2(-1, -1)
+
+[node name="小球" parent="." instance=ExtResource("5_7bfvr")]

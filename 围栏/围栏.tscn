@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cxh44rtqif1ox"]
+[gd_scene load_steps=5 format=3 uid="uid://cxh44rtqif1ox"]
 
 [ext_resource type="Texture2D" uid="uid://blhxrc658s34a" path="res://图片/围栏.png" id="1_6uxu4"]
+[ext_resource type="Script" uid="uid://faet3of5ulqm" path="res://围栏/上围栏.gd" id="1_ieeyn"]
+[ext_resource type="Script" uid="uid://khf4qdmnn0r8" path="res://围栏/下围栏.gd" id="3_vonwu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e1pgw"]
 size = Vector2(1156, 25)
@@ -9,6 +11,7 @@ size = Vector2(1156, 25)
 metadata/_edit_horizontal_guides_ = [29.0, -96.0]
 
 [node name="上围栏" type="Area2D" parent="."]
+script = ExtResource("1_ieeyn")
 metadata/_edit_horizontal_guides_ = [29.0]
 
 [node name="Sprite2D" type="Sprite2D" parent="上围栏"]
@@ -21,13 +24,14 @@ position = Vector2(577, 13.5)
 shape = SubResource("RectangleShape2D_e1pgw")
 one_way_collision_margin = 27.0
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="下围栏" type="Area2D" parent="."]
+script = ExtResource("3_vonwu")
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
-position = Vector2(578, 973)
+[node name="Sprite2D" type="Sprite2D" parent="下围栏"]
+position = Vector2(576, 973)
 texture = ExtResource("1_6uxu4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="下围栏"]
 visible = false
 position = Vector2(576, 635)
 shape = SubResource("RectangleShape2D_e1pgw")

@@ -1,6 +1,6 @@
 extends Area2D
 var init_position
-var vec=Vector2(5,5)
+var vec=Vector2(5,0)
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	init_position = position
@@ -9,11 +9,14 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	move()
-	pass
+	rest()
 	
 func move():
 	position=position+vec
 		
 	pass
 func rest():
-	pass
+	if position.x>1120 or position.x<0:
+		position = init_position
+	
+	

@@ -3,6 +3,9 @@ var v=2
 
 func _process(delta: float) -> void:
 	move()
+	for i in get_overlapping_areas():
+		if i.is_in_group("ball"):
+			i.vec=Vector2(5,-5)
 
 func move():
 	var direction = Vector2.ZERO
