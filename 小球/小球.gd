@@ -1,6 +1,8 @@
 extends Area2D
 var init_position
-var vec=Vector2(5,0)
+var x=0
+var y=5
+var vec=Vector2(x,y)
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	init_position = position
@@ -17,6 +19,7 @@ func move():
 	pass
 func rest():
 	if position.x>1120 or position.x<0:
+		vec = Vector2(x,y)
 		position = init_position
 	
 	

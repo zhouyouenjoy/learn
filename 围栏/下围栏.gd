@@ -10,4 +10,4 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	for i in get_overlapping_areas():
 		if i.is_in_group("ball"):
-			i.vec=Vector2(5,-5)
+			i.vec.y=-5
