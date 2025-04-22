@@ -6,10 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://b3otxjtwf2387" path="res://小球/小球.tscn" id="5_7bfvr"]
 
 [node name="球台" type="Node2D"]
-metadata/_edit_horizontal_guides_ = [27.0, 649.0]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(576, 322)
 texture = ExtResource("2_7bfvr")
 

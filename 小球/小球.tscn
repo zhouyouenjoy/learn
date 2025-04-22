@@ -4,15 +4,17 @@
 [ext_resource type="Script" uid="uid://dm36onu35nfic" path="res://小球/小球.gd" id="1_mlnsu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mlnsu"]
-radius = 21.095
+radius = 9.05539
 
 [node name="小球" type="Area2D"]
 script = ExtResource("1_mlnsu")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(250, 83)
-texture = ExtResource("1_dasun")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(22, 22)
+position = Vector2(38, 25)
+scale = Vector2(0.59, 0.59)
 shape = SubResource("CircleShape2D_mlnsu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(85, 38)
+scale = Vector2(0.205, 0.205)
+texture = ExtResource("1_dasun")

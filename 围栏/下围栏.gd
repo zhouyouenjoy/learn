@@ -8,6 +8,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	pass
+func _physics_process(delta: float) -> void:
 	for i in get_overlapping_areas():
 		if i.is_in_group("ball"):
 			i.vec.y=-5

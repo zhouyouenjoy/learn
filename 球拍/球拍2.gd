@@ -1,8 +1,14 @@
 extends Area2D
-var v=2
+var v=5
 
 func _process(delta: float) -> void:
+	pass
+	
+func _physics_process(delta: float) -> void:
 	move()
+	for i in get_overlapping_areas():
+		if i.is_in_group("ball"):
+			i.vec.x=-5
 
 func move():
 	var direction = Vector2.ZERO

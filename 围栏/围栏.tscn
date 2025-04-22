@@ -8,7 +8,7 @@
 size = Vector2(1156, 25)
 
 [node name="围栏" type="Node2D"]
-metadata/_edit_horizontal_guides_ = [29.0, -96.0]
+metadata/_edit_horizontal_guides_ = [648.0]
 
 [node name="上围栏" type="Area2D" parent="."]
 script = ExtResource("1_ieeyn")
@@ -19,8 +19,7 @@ position = Vector2(578, 295)
 texture = ExtResource("1_6uxu4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="上围栏"]
-visible = false
-position = Vector2(577, 13.5)
+position = Vector2(580, -13)
 shape = SubResource("RectangleShape2D_e1pgw")
 one_way_collision_margin = 27.0
 
@@ -32,7 +31,6 @@ position = Vector2(576, 973)
 texture = ExtResource("1_6uxu4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="下围栏"]
-visible = false
-position = Vector2(576, 635)
+position = Vector2(576, 661)
 shape = SubResource("RectangleShape2D_e1pgw")
 one_way_collision_margin = 27.0
