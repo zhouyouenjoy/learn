@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bi7p0uf4ykc73"]
+[gd_scene load_steps=6 format=3 uid="uid://bi7p0uf4ykc73"]
 
 [ext_resource type="Texture2D" uid="uid://r7vqbawu6ifa" path="res://图片/球台.png" id="2_7bfvr"]
 [ext_resource type="PackedScene" uid="uid://bqp1g4d5r06sf" path="res://球拍/球拍.tscn" id="3_u1dbs"]
 [ext_resource type="PackedScene" uid="uid://cxh44rtqif1ox" path="res://围栏/围栏.tscn" id="4_6pe6m"]
 [ext_resource type="PackedScene" uid="uid://b3otxjtwf2387" path="res://小球/小球.tscn" id="5_7bfvr"]
+[ext_resource type="PackedScene" uid="uid://i8wdchjygijb" path="res://积分系统/积分.tscn" id="5_u1dbs"]
 
 [node name="球台" type="Node2D"]
 
@@ -17,3 +18,5 @@ texture = ExtResource("2_7bfvr")
 
 [node name="围栏" parent="." instance=ExtResource("4_6pe6m")]
 position = Vector2(-1, -1)
+
+[node name="积分" parent="." instance=ExtResource("5_u1dbs")]

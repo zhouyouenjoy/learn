@@ -1,11 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://cxh44rtqif1ox"]
+[gd_scene load_steps=8 format=3 uid="uid://cxh44rtqif1ox"]
 
 [ext_resource type="Texture2D" uid="uid://blhxrc658s34a" path="res://图片/围栏.png" id="1_6uxu4"]
 [ext_resource type="Script" uid="uid://faet3of5ulqm" path="res://围栏/上围栏.gd" id="1_ieeyn"]
 [ext_resource type="Script" uid="uid://khf4qdmnn0r8" path="res://围栏/下围栏.gd" id="3_vonwu"]
+[ext_resource type="Script" uid="uid://dme4dltb4g0lm" path="res://围栏/左围栏.gd" id="4_845s5"]
+[ext_resource type="Script" uid="uid://dvswip86rcjgh" path="res://围栏/右围栏.gd" id="5_is2c4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e1pgw"]
 size = Vector2(1156, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vonwu"]
+size = Vector2(20, 649.5)
 
 [node name="围栏" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [648.0]
@@ -34,3 +39,17 @@ texture = ExtResource("1_6uxu4")
 position = Vector2(576, 661)
 shape = SubResource("RectangleShape2D_e1pgw")
 one_way_collision_margin = 27.0
+
+[node name="左围栏" type="Area2D" parent="."]
+script = ExtResource("4_845s5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="左围栏"]
+position = Vector2(-5, 332.25)
+shape = SubResource("RectangleShape2D_vonwu")
+
+[node name="右围栏" type="Area2D" parent="."]
+script = ExtResource("5_is2c4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="右围栏"]
+position = Vector2(1162, 324)
+shape = SubResource("RectangleShape2D_vonwu")
