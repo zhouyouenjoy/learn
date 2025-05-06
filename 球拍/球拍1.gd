@@ -7,6 +7,7 @@ func _physics_process(delta: float) -> void:
 	move()
 	for i in get_overlapping_areas():
 		if i.is_in_group("ball"):
+			get_node("./sound").play()
 			i.vec.x=5
 
 func move():
