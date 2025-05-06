@@ -25,3 +25,11 @@ func rest():
 		position = init_position
 	
 	
+
+
+func _on_sprite_2d_texture_changed() -> void:
+	pass # Replace with function body.
+
+
+func _on_sprite_2d_frame_changed() -> void:
+	pass # Replace with function body.

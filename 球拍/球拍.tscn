@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bqp1g4d5r06sf"]
+[gd_scene load_steps=7 format=3 uid="uid://bqp1g4d5r06sf"]
 
 [ext_resource type="Texture2D" uid="uid://bsjkxlr34kg1j" path="res://图片/球拍.png" id="1_4s4vg"]
 [ext_resource type="Script" uid="uid://boktlfusjuvim" path="res://球拍/球拍1.gd" id="1_dvvil"]
 [ext_resource type="Script" uid="uid://6mcvo3sccg05" path="res://球拍/球拍2.gd" id="3_gxtfa"]
+[ext_resource type="AudioStream" uid="uid://dmrwmm02w1w08" path="res://图片/乒乓球.mp3" id="4_nhvp2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dvvil"]
 size = Vector2(9.09091, 89.0909)
@@ -26,6 +27,9 @@ position = Vector2(13, 312)
 scale = Vector2(0.55, 0.55)
 shape = SubResource("RectangleShape2D_dvvil")
 
+[node name="sound" type="AudioStreamPlayer2D" parent="Area2D2"]
+stream = ExtResource("4_nhvp2")
+
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("3_gxtfa")
 
@@ -38,3 +42,8 @@ texture = ExtResource("1_4s4vg")
 visible = false
 position = Vector2(1143, 311)
 shape = SubResource("RectangleShape2D_gxtfa")
+
+[node name="sound" type="AudioStreamPlayer2D" parent="Area2D"]
+stream = ExtResource("4_nhvp2")
+
+[connection signal="area_entered" from="Area2D" to="Area2D" method="on_area_entered"]

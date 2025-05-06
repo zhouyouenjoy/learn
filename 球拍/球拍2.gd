@@ -1,5 +1,11 @@
 extends Area2D
 var v=5
+signal abc
+func _ready():
+	connect("abc",Callable(self,"a"))
+	emit_signal("abc",12)
+func a(b):
+	print(b)
 
 func _process(delta: float) -> void:
 	pass
@@ -7,8 +13,7 @@ func _process(delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	move()
 	for i in get_overlapping_areas():
-		if i.is_in_group("ball"):
-			i.vec.x=-5
+		pass
 
 func move():
 	var direction = Vector2.ZERO
@@ -30,4 +35,10 @@ func move():
 		direction = Vector2.ZERO	
 	pass
 	
- 
+
+func on_area_entered(area: Area2D) -> void:
+	
+	if area.is_in_group("ball"):
+		$sound.play()
+		area.vec.x=-5
+	pass # Replace with function body.
